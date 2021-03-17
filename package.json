@@ -1,0 +1,43 @@
+{
+  "name": "@kairos_ds/statistics",
+  "version": "1.0.0",
+  "description": "Lit-Element webcomponent statistics",
+  "main": "statistics.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KairosDS/statistics.git"
+  },
+  "author": "KairosDS Team",
+  "license": "Apache-2.0",
+  "keywords": [
+    "webcomponent",
+    "lit-element"
+  ],
+  "bugs": {
+    "url": "https://github.com/KairosDS Team/statistics/issues"
+  },
+  "homepage": "https://github.com/KairosDS Team/statistics",
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/plugin-proposal-decorators": "^7.12.13",
+    "@open-wc/testing": "^2.0.0",
+    "@web/test-runner": "^0.12.15",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "es-dev-server": "^2.1.0",
+    "rollup": "^2.38.4",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sinon": "^9.2.4"
+  },
+  "scripts": {
+    "start": "es-dev-server --app-index /demo/index.html --node-resolve --watch --open",
+    "build": "rm -rf build && mkdir build && rollup -c",
+    "test": "web-test-runner \"test/**/*.test.js\" --node-resolve",
+    "test:coverage": "web-test-runner --coverage"
+  }
+}
