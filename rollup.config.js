@@ -4,9 +4,9 @@ import { terser } from 'rollup-plugin-terser';
 
 export default {
     preserverSymlinks: true, 
-    input: [ 'statistics.js' ], 
+    input: [ 'statistics-data.js' ], 
     output: {
-        file: 'dist/statistics.js', 
+        file: 'dist/statistics-data.js', 
         format: 'es', 
         sourcemap: true
     },

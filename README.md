@@ -1,3 +1,3 @@
-# Statistics
+# Statistics-data
 
-Lit-Element web component Statistics.
+Lit-Element web component Statistics-data.
