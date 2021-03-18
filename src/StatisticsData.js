@@ -34,7 +34,6 @@ export class StatisticsData extends HTMLChildrenMixin(LitElement) {
   async connectedCallback() {
     super.connectedCallback();
     this.statistics = this._HTMLChildren();
-    console.log('statictics', this.statistics);
   }
 
 
@@ -44,8 +43,8 @@ export class StatisticsData extends HTMLChildrenMixin(LitElement) {
                 <div class="statistics">
                   ${this.statistics.map((statistic) => html`
                     <div class="statistics__content">
-                      <p class="statistics__content-number">${statistic.number}</p>
-                      <p class="statistics__content-text">${statistic.infoTitle}<span>${statistic.description}</span></p>
+                      <p class="statistics__content-number" part="stats-number">${statistic.number}</p>
+                      <p class="statistics__content-text" part="stats-text"><span>${statistic.infoTitle}</span>${statistic.description}</p>
                     </div>
                   `)}
                 </div>

@@ -7,9 +7,8 @@ export const statisticsDataStyles = css`
     --line-height-text: 1.563rem; /* 28px */
     --font-size-number: var(--font-size-xl, 3rem); /* 48px */
     --font-size-text: var(--base-font-size, 1.125rem); /* 18px */
-    --component-color: var(--dark-grey, #727272);
-    --border-color: var(--main-color, #FF7900);
-    --margin-statistics: var(--out-wrapper-margin-desktop, 135px);
+    --border-color: var(--main-color, #000000);
+    --component-color: var(--dark-grey, #000000);
 }
 .statistics {
     display: flex;
@@ -18,10 +17,10 @@ export const statisticsDataStyles = css`
 }
 .statistics__content {
     margin-bottom: 40px;
+    margin-left: 10px;
 }
 .statistics__content-number {
     margin: 0;
-    font-family: 'AvenirLTPro-Heavy';
     font-size: var(--font-size-number);
     line-height: var(--line-height-number);
     color: var(--component-color);
@@ -30,7 +29,6 @@ export const statisticsDataStyles = css`
     margin: 0;
     padding-top: 15px;
     border-top: 4px solid var(--border-color);
-    font-family: Avenir;
     font-size: var(--font-size-text);
     line-height: var(--line-height-text);
     letter-spacing: 1px;
@@ -39,6 +37,8 @@ export const statisticsDataStyles = css`
 .statistics__content-text span {
     font-weight: bold;
 }
+
+
 @media all and (min-width: 768px) {
     .statistics {
         flex-direction: row;

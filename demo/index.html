@@ -30,6 +30,19 @@
             padding-left: 20px;
         }
 
+        :root{
+            --main-color: orange;
+            --line-height-l: 80px;
+            --font-size-xl: 66px;
+            --base-font-size: 24px;
+            --dark-grey: #727272;
+        }
+
+        statistics-data::part(stats-text) {
+            --border-color: green;
+            border-top: 4px solid #000000;
+        }   
+
     </style>
 </head>
 
@@ -54,6 +67,8 @@
 
         <h1>Statistics</h1>
     
+        <h2>Most Popular Technologies ( Programming, Scripting, and Markup Languages-stackoverflow )</h2>
+
         <statistics-data>
                 <div>
                     <p id="number" >67.7%</p>

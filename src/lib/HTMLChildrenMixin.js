@@ -4,16 +4,7 @@ export const HTMLChildrenMixin = (SuperClass) => {
       super();
       this.HTMLAttributesToExtract = ['A', 'IMG', 'LI', 'VIDEO'];
     }
-  
-    // extractHTMLDataAttributes(el) {
-    //   this.HTMLAttr = {};
-    //   const dataAttrArr = Object.keys(el.dataset);
-    //   dataAttrArr.forEach((dataAttr) => {
-    //     this.HTMLAttr[dataAttr] = el.dataset[dataAttr];
-    //   });
-    //   return this.HTMLAttr;
-    // }
-  
+
     extractHTMLAttributes(el) {
       this.HTMLAttr = {};
       const attrs = Array.prototype.slice.call(el.attributes);
@@ -26,13 +17,6 @@ export const HTMLChildrenMixin = (SuperClass) => {
       return this.HTMLAttr;
     }
 
-    /**
-     * Método para leer del DOM los elementos e insertarlos
-     * como propiedades del componentes que luego se renderizan
-     * en el shadowRoot.
-     * De esta manera el SEO interpreta los elementos HTML del DOM
-     * Por otro si fallase la carga del componentes se visualizaria el contenido, aunque sin CSS
-     */
     _HTMLChildren(node = this) {
       const childNodes = [...node.querySelectorAll('*')];
       const childArr = [];
