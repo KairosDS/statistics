@@ -19,6 +19,23 @@ export const statisticsDataStyles = css`
     margin-bottom: 40px;
     margin-left: 10px;
 }
+
+.statistics__animate {
+    opacity: 1;
+    animation: scaleMove 2s;
+    transition-property: opacity;
+    transition-duration: 2s ;
+    transition-timing-function: ease-in-out;
+}
+@keyframes scaleMove {
+    0% {
+        transform: translateY(400px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
 .statistics__content-number {
     margin: 20px 0px;
     line-height: var(--line-height-number);

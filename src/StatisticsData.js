@@ -31,6 +31,14 @@ export class StatisticsData extends HTMLChildrenMixin(LitElement) {
        animation: {
         type: Boolean,
       },
+      /**
+       * the stat rises to position 
+       * @property
+       * @type {Boolean}
+       */
+       scrollPage: {
+        type: Boolean,
+      },
     }
     }
 
@@ -38,6 +46,8 @@ export class StatisticsData extends HTMLChildrenMixin(LitElement) {
     super();
     this.statistics = [];
     this.animation= false;
+    this.scrollPage=false;
+    this.getPageScroll = this.getPageScroll.bind(this);
     }
 
   async connectedCallback() {
@@ -45,14 +55,34 @@ export class StatisticsData extends HTMLChildrenMixin(LitElement) {
     this.statistics = this._HTMLChildren();
     window.onload = () => {
       if(this.animation) {this.animatedStats();}
+      if(this.scrollPage) { window.addEventListener('scroll',this.getPageScroll);}
     }
+    
+  }
+
+  getPageScroll() {
+    const elementeContainerPosition = this.shadowRoot.querySelector('#statistics').offsetTop;
+    const animateElment = [ ...this.shadowRoot.querySelectorAll('.statistics__content') ];
+    this.pageScroll = window.pageYOffset;
+    if (this.pageScroll > elementeContainerPosition - 800) {
+      animateElment.forEach((item, i) => {
+        this.addAnimationDelay(item, i);
+      });
+    }
+  }
+
+  addAnimationDelay(item, i) {
+    setTimeout(() => {
+      item.classList.add('statistics__animate');
+    }, i * 200);
+    if(this.scrollPage || this.animation && this.scrollPage) {this.animatedStats();
+    window.removeEventListener('scroll', this.getPageScroll);}
   }
 
 
 
   animatedStats() {
     const stats = this.shadowRoot.querySelectorAll('#number');
-    console.log('stats', stats)
     stats.forEach((stat) => {
       const patt = /(\D+)?(\d+)(\D+)?(\d+)?(\D+)?/;
       let result = [...patt.exec(stat.getAttribute('data-target'))];
@@ -99,7 +129,7 @@ export class StatisticsData extends HTMLChildrenMixin(LitElement) {
     render() {
         if (this.statistics) {
               return html`
-                <div class="statistics">
+                <div id="statistics" class="statistics">
                   ${this.statistics.map((statistic) => html`
                     <div class="statistics__content">
                       <p id="number" class="statistics__content-number" 

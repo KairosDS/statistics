@@ -37,6 +37,9 @@
             --base-font-size: 24px;
             --dark-grey: #727272;
         }
+        .height {
+            height: 2000px;
+        }
 
         statistics-data::part(stats-text) {
             --border-color: green;
@@ -59,8 +62,8 @@
             <pre class="block attributes">
           <h3>Attributes</h3>
           <ul>
-            <li>property1 (String)</li>
-            <li>property2 (Number)</li>
+            <li>animation (boolean)</li>
+            <li>scrollPage (boolean)</li>
           </ul>
         </pre>
         </div>
@@ -68,8 +71,8 @@
         <h1>Statistics</h1>
     
         <h2>Most Popular Technologies ( Programming, Scripting, and Markup Languages-stackoverflow )</h2>
-
-        <statistics-data>
+        
+        <statistics-data scrollPage="true">
                 <div>
                     <p id="number" >67.7%</p>
                     <p id="infoTitle" > JavaScript :</p>
