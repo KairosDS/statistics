@@ -20,16 +20,34 @@ export const statisticsDataStyles = css`
     margin-left: 10px;
 }
 .statistics__content-number {
-    margin: 0;
-    font-size: var(--font-size-number);
+    margin: 20px 0px;
     line-height: var(--line-height-number);
     color: var(--component-color);
+    display: flex;
+    font-size: var(--font-size-number);
+    overflow: hidden;
+    align-items: center;
+    height: 4.125rem;  
 }
+
+
+.statistics__content-number > span {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 2s ease;
+    transform: translateY(0);
+  }
+.statistics__content-number > span span {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
 .statistics__content-text {
     margin: 0;
     padding-top: 15px;
     border-top: 4px solid var(--border-color);
-    font-size: var(--font-size-text);
     line-height: var(--line-height-text);
     letter-spacing: 1px;
     color: var(--component-color);
