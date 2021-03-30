@@ -3,9 +3,9 @@ import { css } from "lit-element";
 export const statisticsDataStyles = css`
 :host {
     display: block;
-    --line-height-number: var(--line-height-l, 4.125rem); /* 66px */
+    --line-height-number: var(--line-height, 4.125rem); /* 66px */
     --line-height-text: 1.563rem; /* 28px */
-    --font-size-number: var(--font-size-xl, 3rem); /* 48px */
+    --font-size-number: var(--font-size, 3rem); /* 48px */
     --font-size-text: var(--base-font-size, 1.125rem); /* 18px */
     --border-color: var(--main-color, #000000);
     --component-color: var(--dark-grey, #000000);
@@ -20,22 +20,6 @@ export const statisticsDataStyles = css`
     margin-left: 10px;
 }
 
-.statistics__animate {
-    opacity: 1;
-    animation: scaleMove 2s;
-    transition-property: opacity;
-    transition-duration: 2s ;
-    transition-timing-function: ease-in-out;
-}
-@keyframes scaleMove {
-    0% {
-        transform: translateY(400px)
-    }
-    100% {
-        transform: translateY(0)
-    }
-}
-
 .statistics__content-number {
     margin: 20px 0px;
     line-height: var(--line-height-number);
@@ -44,9 +28,8 @@ export const statisticsDataStyles = css`
     font-size: var(--font-size-number);
     overflow: hidden;
     align-items: center;
-    height: 4.125rem;  
+    height: 4.125rem;
 }
-
 
 .statistics__content-number > span {
     z-index: 1;
@@ -84,6 +67,31 @@ export const statisticsDataStyles = css`
         flex-grow: 1;
         flex-basis: 0;
     }
+
+    .statistics__content_hidden {
+        opacity: 0;
+    }
+    
+    .statistics__animate {
+        opacity: 1;
+        animation: scaleMove 2s;
+        transition-property: opacity;
+        transition-duration: 2s ;
+        transition-timing-function: ease-in-out;
+    }
+    @keyframes scaleMove {
+        0% {
+            transform: translateY(400px)
+        }
+        100% {
+            transform: translateY(0)
+        }
+    }
+
+    .stats__animate_number {
+        opacity: 1;
+    }
+   
     .statistics__content:last-child {
         margin-right: 0px;
     }
