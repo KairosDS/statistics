@@ -114,12 +114,12 @@ Show stats with counter animation and animated movement of the set of statistics
 
 |      Name             |                     Description                         |
 |-----------------------|---------------------------------------------------------|
-| --line-height-number  | line-height to the number component                     |
-| --line-height-text    | line-height to the text component                       |
-| --font-size-number    | Font-size to the number component                       |
-| --font-size-text      | Font-size to the text component                         |
-| --border-color        | border color border-top                                 |
-| --component-color     | color base to the component                             |
+| --line-height         | line-height to the number component                     |
+| --line-height-text    | line-height-text to the text component                  |
+| --font-size           | Font-size to the number component                       |
+| --base-font-size      | Font-size to the text component                         |
+| --main-color          | border color border-top                                 |
+| --base-color          | color base to the component                             |
 
 
 ## CSS Shadow Parts

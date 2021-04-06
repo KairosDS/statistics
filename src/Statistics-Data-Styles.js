@@ -4,11 +4,11 @@ export const statisticsDataStyles = css`
 :host {
     display: block;
     --line-height-number: var(--line-height, 4.125rem); /* 66px */
-    --line-height-text: 1.563rem; /* 28px */
+    --line-height-text: var( --line-height-text, 1.563rem); /* 28px */
     --font-size-number: var(--font-size, 3rem); /* 48px */
     --font-size-text: var(--base-font-size, 1.125rem); /* 18px */
     --border-color: var(--main-color, #000000);
-    --component-color: var(--dark-grey, #000000);
+    --component-color: var(--base-color, #000000);
 }
 .statistics {
     display: flex;
