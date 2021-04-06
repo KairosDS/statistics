@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Statistics demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script type="module" src="../statistics-data.js"></script>
+    <style>
+        .blocks {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .block {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            white-space: normal;
+        }
+
+        .code {
+            padding: 20px;
+            color: #FFF;
+            background: #000;
+        }
+
+        .attributes {
+            padding-left: 20px;
+        }
+
+        :root{
+            --main-color: orange;
+            --line-height: 80px;
+            --font-size: 66px;
+            --base-font-size: 24px;
+            --base-color: #727272;
+        }
+        .height {
+            height: 500px;
+        }
+
+        statistics-data::part(stats-text) {
+            --border-color: green;
+            border-top: 4px solid #000000;
+        }   
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <main>
+        <h3>Basic Statistics Demo</h3>
+        <div class="blocks">
+            <pre class="block code">
+          <code>
+            &lt;statistics&gt;&lt;statistics&gt;
+          </code>
+        </pre>
+            <pre class="block attributes">
+          <h3>Attributes</h3>
+          <ul>
+            <li>animation (boolean)</li>
+            <li>move-stats (boolean)</li>
+          </ul>
+        </pre>
+        </div>
+
+        <h1>Statistics</h1>
+    
+        <h2>Most Popular Technologies ( Programming, Scripting, and Markup Languages-stackoverflow )</h2>
+        
+        <statistics-data animation="true">
+                <div>
+                    <p id="number" >67.7%</p>
+                    <p id="infoTitle" > JavaScript :</p>
+                    <span id="description"> often abbreviated as JS, is a programming language that conforms to the ECMAScript specification</span>
+                </div>
+                <div>
+                    <p id="number" >63.1%</p>
+                    <p id="infoTitle" >HTML/CSS :</p>
+                    <span id="description"> HTML is the standard markup language for documents designed to be displayed in a web browser and CSS is a style sheet language used for describing the presentation of a document written</span>
+                </div>
+                <div>
+                    <p id="number" >54.7%</p>
+                    <p id="infoTitle" >SQL :</p>
+                    <span id="description"> Structured Query Language is a domain-specific language used in programming and designed </span>
+                </div>
+                <div>
+                    <p id="number" >44.1%</p>
+                    <p id="infoTitle" >Python :</p>
+                    <span id="description"> is an interpreted, high-level and general-purpose programming language</span>
+                </div>
+        </statistics-data>
+       
+
+        <!-- <div class="height"></div>
+        <statistics-data animation="true">
+                <div>
+                    <p id="number" >67.7%</p>
+                    <p id="infoTitle" > JavaScript :</p>
+                    <span id="description"> often abbreviated as JS, is a programming language that conforms to the ECMAScript specification</span>
+                </div>
+                <div>
+                    <p id="number" >63.1%</p>
+                    <p id="infoTitle" >HTML/CSS :</p>
+                    <span id="description"> HTML is the standard markup language for documents designed to be displayed in a web browser and CSS is a style sheet language used for describing the presentation of a document written</span>
+                </div>
+                <div>
+                    <p id="number" >54.7%</p>
+                    <p id="infoTitle" >SQL :</p>
+                    <span id="description"> Structured Query Language is a domain-specific language used in programming and designed </span>
+                </div>
+                <div>
+                    <p id="number" >44.1%</p>
+                    <p id="infoTitle" >Python :</p>
+                    <span id="description"> is an interpreted, high-level and general-purpose programming language</span>
+                </div>
+        </statistics-data>
+        <div class="height"></div> -->
+        
+        </main>
+    </div>
+</body>
+
+</html>
